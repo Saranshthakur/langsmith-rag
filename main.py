@@ -21,7 +21,8 @@ docs
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 text_splitter=RecursiveCharacterTextSplitter(chunk_size=1000,chunk_overlap=200)
-documents=text_splitter.split_documents(docs)
+documents=text_splitter.split_documents(docs) ## Split the loaded Documents into smaller Documents
+
 documents
 
 from langchain_openai import OpenAIEmbeddings
