@@ -1,6 +1,4 @@
-Sure — here’s **exactly the same code** you shared above, without a single change or edit:
 
-```python
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -10,13 +8,16 @@ os.environ['OPENAI_API_KEY']=os.getenv("OPENAI_API_KEY")
 os.environ["LANGCHAIN_API_KEY"]=os.getenv("LANGCHAIN_API_KEY")
 os.environ["LANGCHAIN_TRACING_V2"]="true"
 os.environ["LANGCHAIN_PROJECT"]=os.getenv("LANGCHAIN_PROJECT")
+
 #Data Ingestion--From the website we need to scrape the data 
 from langchain_community.document_loaders import WebBaseLoader
 loader=WebBaseLoader("https://docs.smith.langchain.com/tutorials/Administrators/manage_spend")
 loader
 docs=loader.load()
 docs
+
 ### Load Data--> Docs-->Divide our Docuemnts into chunks dcouments-->text-->vectors-->Vector Embeddings--->Vector Store DB
+
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 text_splitter=RecursiveCharacterTextSplitter(chunk_size=1000,chunk_overlap=200)
@@ -66,6 +67,7 @@ retrieval_chain
 
 
 ## Get the response form the LLM
+
 response=retrieval_chain.invoke({"input":"LangSmith has two usage limits: total traces and extended"})
 response['answer']
 
@@ -73,4 +75,3 @@ response['answer']
 response
 
 response['context']
-```
