@@ -8,7 +8,7 @@ End-to-end **Retrieval-Augmented Generation (RAG)** pipeline using **LangChain**
 
 This project walks through how to **build a Retrieval-Augmented Generation (RAG) system from scratch**. It takes information from the web, organizes it, and uses that data to answer questions accurately with **GPT-4**.  
 
-The process begins by **scraping content** from the LangSmith documentation using `WebBaseLoader`. The raw text is then **split into small overlapping chunks** with `RecursiveCharacterTextSplitter`, ensuring the model retains context across sections. Each chunk is **converted into embeddings** with OpenAI’s embedding model and stored in a **FAISS vector database** for fast similarity search.  
+The process begins by **scraping content** from the LangSmith documentation using **WebBaseLoader**. The raw text is then **split into small overlapping chunks** with **RecursiveCharacterTextSplitter**, ensuring the model retains context across sections. Each chunk is **converted into embeddings** with **OpenAI’s embedding** model and stored in a **FAISS vector database** for fast similarity search.  
 
 When a user asks a question, the **retriever searches the FAISS index** for the most relevant chunks of text. Those chunks, along with the query, are sent to **GPT-4**, which generates a clear, grounded answer based on the original documentation.  
 
