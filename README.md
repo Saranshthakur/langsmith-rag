@@ -3,6 +3,19 @@
 End-to-end **Retrieval-Augmented Generation (RAG)** pipeline using **LangChain**, **OpenAI**, and **FAISS** to query **LangSmith documentation**.  
 
 ---
+### Web Knowledge Retrieval using LangChain and OpenAI (RAG Pipeline)
+
+This project demonstrates how to build an **end-to-end Retrieval-Augmented Generation (RAG) system** that can read, store, and answer questions from real web content.  
+
+- **Data Source:** Scraped content directly from the **LangSmith documentation** using LangChain’s `WebBaseLoader`.  
+- **Preprocessing:** Split long documents into smaller, overlapping text chunks with **`RecursiveCharacterTextSplitter`** for better context handling.  
+- **Embeddings:** Generated semantic embeddings using **OpenAI’s text-embedding model** to convert text into numerical representations.  
+- **Vector Database:** Stored embeddings in a **FAISS vector index** to enable **fast and accurate similarity search**.  
+- **Retrieval + Generation:** Used **LangChain retrievers and document chains** with **GPT-4** to produce **context-aware answers** grounded in the retrieved documents.  
+- **Outcome:** Demonstrated the **complete workflow of a modern RAG pipeline**, combining retrieval accuracy with natural language generation for intelligent information access.
+
+  ---
+
 
 ## Overview  
 
