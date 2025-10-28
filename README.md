@@ -1,4 +1,4 @@
-# langsmith-rag
+# Langsmith-rag
 
 End-to-end Retrieval-Augmented Generation (RAG) pipeline using **LangChain**, **OpenAI**, and **FAISS** to query LangSmith documentation.
 
@@ -10,7 +10,7 @@ It scrapes LangSmith documentation, splits the content into chunks, creates embe
 
 ---
 
-## 🧩 Tech Stack
+##  Tech Stack
 - **LangChain** – pipeline orchestration, document loaders, retrievers, and prompt templates  
 - **OpenAI (GPT-4o + embeddings)** – for generating vector representations and responses  
 - **FAISS** – high-speed vector similarity search  
@@ -18,7 +18,7 @@ It scrapes LangSmith documentation, splits the content into chunks, creates embe
 
 ---
 
-## ⚙️ Project Workflow
+## Project Workflow
 1. **Load Environment Variables** using `dotenv`
 2. **Scrape Data** using `WebBaseLoader` from LangChain community loaders
 3. **Split Documents** into overlapping text chunks using `RecursiveCharacterTextSplitter`
@@ -28,9 +28,4 @@ It scrapes LangSmith documentation, splits the content into chunks, creates embe
 7. **Query the LLM** for context-aware responses
 
 ---
-
-## 🧠 Example Query
-```python
-response = retrieval_chain.invoke({"input": "LangSmith has two usage limits: total traces and extended"})
-print(response['answer'])
 
